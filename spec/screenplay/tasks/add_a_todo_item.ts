@@ -18,7 +18,6 @@ export class AddATodoItem implements Task {
                 .thenHit(protractor.Key.ENTER)
         );
     }
-
     constructor(private itemName: string) {                 // constructor assigning the name of the item
     }                                                       // to a private field
 }

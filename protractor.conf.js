@@ -6,6 +6,8 @@ const
 
 exports.config = {
 
+
+
     baseUrl: 'http://todomvc.com',
 
     seleniumServerJar: seleniumJar,
@@ -18,8 +20,13 @@ exports.config = {
     // https://github.com/protractor-cucumber-framework/protractor-cucumber-framework#uncaught-exceptions
     ignoreUncaughtExceptions: true,
 
+    // Framework definition - tells Protractor to use Serenity/JS
     framework: 'custom',
-    frameworkPath: require.resolve('protractor-cucumber-framework'),
+    frameworkPath: require.resolve('serenity-js'),
+
+    serenity: {
+        dialect: 'cucumber'     // or 'mocha'
+    },
 
     specs: [ 'features/**/*.feature' ],
 
